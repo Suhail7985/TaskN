@@ -104,9 +104,9 @@ export function Hero() {
               onMouseLeave={onMouseLeave}
               className={cn(
                 "relative mx-auto w-full max-w-[500px]",
-                "h-[420px] sm:h-[440px] md:h-[460px]",
-                "-translate-x-4 translate-y-8 sm:-translate-x-5 sm:translate-y-10",
-                "lg:mx-0 lg:mr-auto lg:ml-0 lg:max-w-[520px]"
+                "h-[520px] sm:h-[540px] md:h-[560px]",
+                "-translate-x-10 translate-y-8 sm:-translate-x-12 sm:translate-y-10",
+                "lg:mx-0 lg:mr-auto lg:ml-0"
               )}
             >
               {/* Top row */}
@@ -128,7 +128,7 @@ export function Hero() {
                 entranceDelay={0.28}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-[12%] top-10"
+                className="left-0 top-2"
               />
 
               <FloatingCard
@@ -149,7 +149,7 @@ export function Hero() {
                 entranceDelay={0.32}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-0 top-[30%]"
+                className="left-0 top-[96px]"
               />
 
               {/* Middle — portal centered */}
@@ -162,7 +162,7 @@ export function Hero() {
                 floatDuration={6.5}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-[44%] top-[46%]"
+                className="left-0 top-[188px] md:left-[252px] md:top-[178px]"
               />
 
               {/* Bottom row — staggered so Tasks & Documents don't touch */}
@@ -184,7 +184,7 @@ export function Hero() {
                 entranceDelay={0.44}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="bottom-[96px] left-0"
+                className="left-0 top-[306px]"
               />
 
               <FloatingCard
@@ -205,7 +205,7 @@ export function Hero() {
                 entranceDelay={0.5}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="bottom-6 left-[42%]"
+                className="left-0 top-[404px] md:left-[252px] md:top-[394px]"
               />
             </div>
           </motion.div>

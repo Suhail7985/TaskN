@@ -20,7 +20,7 @@ const CAPSULE_HEIGHT = 72;
 
 /** Left strips — 1st tilted NE, 2nd large at “manage”, 3rd at subtext */
 const leftCapsuleConfigs = [
-  { width: 200, top: 178, left: -58, rotate: 11 },
+  { width: 200, top: 178, left: -58, rotate: -8 },
   { width: 300, top: 318, left: -88, rotate: 0 },
   { width: 340, top: 438, left: -72, rotate: 0 },
 ] as const;
