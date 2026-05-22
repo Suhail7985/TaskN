@@ -35,7 +35,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative isolate min-h-screen w-full overflow-hidden bg-canvas dark:bg-canvas-dark"
+      className="relative isolate min-h-screen w-full overflow-hidden bg-canvas transition-colors duration-300 dark:bg-canvas-dark"
       aria-labelledby="hero-heading"
     >
       <ThemeToggle />
@@ -55,7 +55,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1] }}
               className={cn(
-                "max-w-[460px] text-heading-base dark:text-heading-base-dark",
+                "max-w-[460px] text-heading-base transition-colors duration-300 dark:text-heading-base-dark",
                 "text-[1.75rem] sm:text-[2.125rem] md:text-[2.5rem] lg:text-[2.75rem] xl:text-[3rem]",
                 "leading-[0_95] tracking-[-0_05em]"
               )}
@@ -75,7 +75,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.12, ease: "easeOut" }}
               className={cn(
                 "mt-6 max-w-[420px] text-sm font-normal leading-[1_6] md:text-base lg:mt-8",
-                "text-sub-blue dark:text-sub-blue-dark"
+                "text-sub-blue transition-colors duration-300 dark:text-sub-blue-dark"
               )}
             >
               Track matters, coordinate schedules, manage clients, centralize
@@ -142,7 +142,7 @@ export function Hero() {
                 entranceDelay={0.32}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-0 top-2"
+                className="left-3 top-[30%] sm:top-[31%] lg:top-[32%]"
               />
 
               {/* Middle — portal centered */}
@@ -185,8 +185,8 @@ export function Hero() {
                 icon={<FileText size={22} strokeWidth={2} />}
                 bgColor="#2c1f4d"
                 textColor="#ff8c20"
-                rotation={6}
-                width={250}
+                rotation={8}
+                width={268}
                 height={64}
                 fontSize={24}
                 paddingLeft={26}
@@ -198,7 +198,7 @@ export function Hero() {
                 entranceDelay={0.5}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="bottom-0 right-8"
+                className="bottom-2 left-[49%]"
               />
             </div>
           </motion.div>

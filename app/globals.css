@@ -4,16 +4,24 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 body {
-  background-color: #f4f4f8;
+  background-color: #f8f9fe;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
 }
 
 .dark body {
-  background-color: #12111a;
+  background-color: #09080f;
 }
 
 @media (prefers-reduced-motion: reduce) {

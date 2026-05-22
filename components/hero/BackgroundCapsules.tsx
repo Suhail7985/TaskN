@@ -24,12 +24,19 @@ const LEFT_LEFT = -80;
 
 const leftCapsuleWidths = [220, 100, 340] as const;
 
+/** First left strip only — nudged northeast (up + slightly right) */
+const LEFT_FIRST_TOP = 228;
+const LEFT_FIRST_LEFT = -52;
+
 const leftCapsules: CapsuleConfig[] = leftCapsuleWidths.map((width, i) => ({
   id: `left-${i + 1}`,
   width,
   height: CAPSULE_HEIGHT,
-  top: LEFT_START_TOP + i * (CAPSULE_HEIGHT + LEFT_GAP),
-  left: LEFT_LEFT,
+  top:
+    i === 0
+      ? LEFT_FIRST_TOP
+      : LEFT_START_TOP + i * (CAPSULE_HEIGHT + LEFT_GAP),
+  left: i === 0 ? LEFT_FIRST_LEFT : LEFT_LEFT,
   delay: i * 0.05,
 }));
 
@@ -50,9 +57,9 @@ const rightCapsules: CapsuleConfig[] = rightCapsuleWidths.map((width, i) => ({
 }));
 
 const capsuleClass = cn(
-  "pointer-events-none absolute z-0 rounded-full",
-  "bg-[#dfe5ff] opacity-75",
-  "dark:bg-[#2a2d47] dark:opacity-80"
+  "pointer-events-none absolute z-0 rounded-full transition-colors duration-300",
+  "bg-blob-capsule opacity-90",
+  "dark:bg-blob-capsule-dark dark:opacity-95"
 );
 
 function Capsule({

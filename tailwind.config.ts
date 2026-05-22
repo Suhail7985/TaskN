@@ -11,15 +11,15 @@ const config: Config = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: "#f4f4f8",
-          dark: "#12111a",
+          DEFAULT: "#f8f9fe",
+          dark: "#09080f",
         },
-        "heading-base": "#7d7db0",
-        "heading-base-dark": "#9b9cc4",
-        "sub-blue": "#5f67ff",
-        "sub-blue-dark": "#7b84ff",
-        "blob-capsule": "#dfe5ff",
-        "blob-capsule-dark": "#2a2d47",
+        "heading-base": "#5c5f9a",
+        "heading-base-dark": "#d0d2f0",
+        "sub-blue": "#4a54ff",
+        "sub-blue-dark": "#9aa3ff",
+        "blob-capsule": "#c5d0ff",
+        "blob-capsule-dark": "#3d4468",
       },
       fontFamily: {
         sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
