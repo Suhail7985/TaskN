@@ -12,40 +12,34 @@ type CapsuleConfig = {
   left?: number;
   right?: number;
   top?: number;
+  rotate?: number;
   delay: number;
 };
 
 const CAPSULE_HEIGHT = 72;
 
-/** Left — thinner strips, even spacing */
-const LEFT_GAP = 20;
-const LEFT_START_TOP = 260;
-const LEFT_LEFT = -80;
+/** Left strips — 1st tilted NE, 2nd large at “manage”, 3rd at subtext */
+const leftCapsuleConfigs = [
+  { width: 200, top: 178, left: -58, rotate: 11 },
+  { width: 300, top: 318, left: -88, rotate: 0 },
+  { width: 340, top: 438, left: -72, rotate: 0 },
+] as const;
 
-const leftCapsuleWidths = [220, 300, 340] as const;
-
-/** First left strip only — nudged northeast (up + slightly right) */
-const LEFT_FIRST_TOP = 228;
-const LEFT_FIRST_LEFT = -52;
-
-const leftCapsules: CapsuleConfig[] = leftCapsuleWidths.map((width, i) => ({
+const leftCapsules: CapsuleConfig[] = leftCapsuleConfigs.map((cfg, i) => ({
   id: `left-${i + 1}`,
-  width,
+  width: cfg.width,
   height: CAPSULE_HEIGHT,
-  top:
-    i === 0
-      ? LEFT_FIRST_TOP
-      : LEFT_START_TOP + i * (CAPSULE_HEIGHT + LEFT_GAP),
-  left: i === 0 ? LEFT_FIRST_LEFT : LEFT_LEFT,
+  top: cfg.top,
+  left: cfg.left,
+  rotate: cfg.rotate,
   delay: i * 0.05,
 }));
 
-/** Right — longer strips, offset so they stay beside (not under) cards */
+/** Right — long edge strips */
 const RIGHT_GAP = 20;
-const RIGHT_START_TOP = 100;
-const RIGHT_OFFSETS = [-140, -200, -140] as const;
-
-const rightCapsuleWidths = [280, 360, 280] as const;
+const RIGHT_START_TOP = 108;
+const RIGHT_OFFSETS = [-120, -180, -120] as const;
+const rightCapsuleWidths = [300, 380, 300] as const;
 
 const rightCapsules: CapsuleConfig[] = rightCapsuleWidths.map((width, i) => ({
   id: `right-${i + 1}`,
@@ -58,8 +52,8 @@ const rightCapsules: CapsuleConfig[] = rightCapsuleWidths.map((width, i) => ({
 
 const capsuleClass = cn(
   "pointer-events-none absolute z-0 rounded-full transition-colors duration-300",
-  "bg-blob-capsule opacity-90",
-  "dark:bg-blob-capsule-dark dark:opacity-95"
+  "bg-blob-capsule/80",
+  "dark:bg-blob-capsule-dark/90"
 );
 
 function Capsule({
@@ -76,6 +70,8 @@ function Capsule({
           height: cap.height,
           left: cap.left,
           top: cap.top,
+          transform: cap.rotate ? `rotate(${cap.rotate}deg)` : undefined,
+          transformOrigin: "left center",
         }
       : {
           width: cap.width,

@@ -49,7 +49,8 @@ function PortalCardComponent({
         rotate: rotation,
         x: px,
         y: py,
-        boxShadow: "0 14px 32px -12px rgba(55, 45, 91, 0.14)",
+        boxShadow:
+          "0 14px 32px -12px rgba(55, 45, 91, 0.14)",
       }}
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
@@ -93,9 +94,9 @@ function PortalCardComponent({
         }
         style={{ width, height }}
         className={cn(
-          "relative flex items-center rounded-[999px] bg-[#9b9bef] pl-3 pr-4",
+          "relative flex items-center rounded-[999px] bg-[#a8a8ef] pl-3 pr-4",
           "transition-[box-shadow,filter,background-color] duration-300",
-          "dark:bg-[#56548a]"
+          "dark:bg-[#4e4c78] dark:shadow-[0_18px_42px_rgba(0,0,0,0.5)]"
         )}
       >
         <div

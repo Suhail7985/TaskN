@@ -62,10 +62,16 @@ export function Hero() {
             >
               <span className="block font-light">A single platform to</span>
               <span className="block font-light">
-                <span className="font-bold">manage</span> every part of
+                <span className="font-bold text-heading-emphasis dark:text-heading-emphasis-dark">
+                  manage
+                </span>{" "}
+                every part of
               </span>
               <span className="block font-light">
-                your <span className="font-bold">legal work</span>
+                your{" "}
+                <span className="font-bold text-heading-emphasis dark:text-heading-emphasis-dark">
+                  legal work
+                </span>
               </span>
             </motion.h1>
 
@@ -99,8 +105,8 @@ export function Hero() {
               className={cn(
                 "relative mx-auto w-full max-w-[500px]",
                 "h-[420px] sm:h-[440px] md:h-[460px]",
-                "translate-x-5 translate-y-6 sm:translate-x-6 sm:translate-y-7",
-                "lg:mx-0 lg:ml-2 lg:mr-auto lg:max-w-[520px]"
+                "-translate-x-4 translate-y-8 sm:-translate-x-5 sm:translate-y-10",
+                "lg:mx-0 lg:mr-auto lg:ml-0 lg:max-w-[520px]"
               )}
             >
               {/* Top row */}
@@ -109,12 +115,12 @@ export function Hero() {
                 icon={<Receipt size={22} strokeWidth={2} />}
                 bgColor="#2f43ff"
                 textColor="#ffffff"
-                rotation={6}
+                rotation={10}
                 width={250}
                 height={64}
                 fontSize={24}
                 paddingLeft={28}
-                shadow="0 14px 36px rgba(47, 67, 255, 0.2)"
+                shadow="0 14px 36px rgba(47, 67, 255, 0.22)"
                 hoverShadow="0 22px 50px rgba(47, 67, 255, 0.45)"
                 zIndex={5}
                 floatDuration={7}
@@ -122,7 +128,7 @@ export function Hero() {
                 entranceDelay={0.28}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-[28%] top-8"
+                className="left-[12%] top-10"
               />
 
               <FloatingCard
@@ -143,7 +149,7 @@ export function Hero() {
                 entranceDelay={0.32}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-3 top-[30%] sm:top-[31%] lg:top-[32%]"
+                className="left-0 top-[30%]"
               />
 
               {/* Middle — portal centered */}
@@ -156,7 +162,7 @@ export function Hero() {
                 floatDuration={6.5}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-1/2 top-[38%] -translate-x-1/2"
+                className="left-[44%] top-[46%]"
               />
 
               {/* Bottom row — staggered so Tasks & Documents don't touch */}
@@ -178,7 +184,7 @@ export function Hero() {
                 entranceDelay={0.44}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="bottom-[88px] left-4"
+                className="bottom-[96px] left-0"
               />
 
               <FloatingCard
@@ -199,7 +205,7 @@ export function Hero() {
                 entranceDelay={0.5}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="bottom-2 left-[49%]"
+                className="bottom-6 left-[42%]"
               />
             </div>
           </motion.div>

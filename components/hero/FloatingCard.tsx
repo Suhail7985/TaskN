@@ -117,7 +117,10 @@ function FloatingCardComponent({
           paddingLeft,
           gap: iconGap,
         }}
-        className="flex items-center rounded-[999px] font-semibold transition-[box-shadow,filter] duration-300"
+        className={cn(
+          "flex items-center rounded-[999px] font-semibold transition-[box-shadow,filter] duration-300",
+          "dark:shadow-[0_18px_42px_rgba(0,0,0,0.55)]"
+        )}
       >
         <span
           className="flex shrink-0 items-center justify-center"

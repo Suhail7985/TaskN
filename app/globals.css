@@ -12,7 +12,7 @@ html.dark {
 }
 
 body {
-  background-color: #f8f9fe;
+  background-color: #f4f5f9;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition:
@@ -21,7 +21,7 @@ body {
 }
 
 .dark body {
-  background-color: #09080f;
+  background-color: #0f0e17;
 }
 
 @media (prefers-reduced-motion: reduce) {
