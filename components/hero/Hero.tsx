@@ -99,7 +99,8 @@ export function Hero() {
               className={cn(
                 "relative mx-auto w-full max-w-[500px]",
                 "h-[420px] sm:h-[440px] md:h-[460px]",
-                "lg:mx-0 lg:mr-auto lg:ml-0 lg:max-w-[520px]"
+                "translate-x-5 translate-y-6 sm:translate-x-6 sm:translate-y-7",
+                "lg:mx-0 lg:ml-2 lg:mr-auto lg:max-w-[520px]"
               )}
             >
               {/* Top row */}

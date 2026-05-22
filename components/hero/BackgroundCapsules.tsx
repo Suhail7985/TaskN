@@ -22,7 +22,7 @@ const LEFT_GAP = 20;
 const LEFT_START_TOP = 260;
 const LEFT_LEFT = -80;
 
-const leftCapsuleWidths = [220, 100, 340] as const;
+const leftCapsuleWidths = [220, 300, 340] as const;
 
 /** First left strip only — nudged northeast (up + slightly right) */
 const LEFT_FIRST_TOP = 228;
