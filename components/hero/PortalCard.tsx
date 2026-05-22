@@ -120,13 +120,13 @@ function PortalCardComponent({
         </div>
 
         <div className="min-w-0 flex-1 pl-2.5 pr-1">
-          <h3 className="truncate text-[17px] font-bold leading-tight text-[#352c5a] dark:text-[#e8e4f8]">
+          <h3 className="truncate text-[15px] font-bold leading-tight text-[#352c5a] dark:text-[#e8e4f8]">
             John Doe - Portal
           </h3>
-          <p className="mt-0.5 line-clamp-2 text-[13px] leading-snug text-[#5b5480] dark:text-[#b8b2d0]">
+          <p className="mt-0.5 line-clamp-2 text-[12px] leading-snug text-[#5b5480] dark:text-[#b8b2d0]">
             Hey! Could you please review a document for me?
           </p>
-          <p className="mt-0.5 text-[12px] text-[#7c75a5] dark:text-[#9490b0]">
+          <p className="mt-0.5 text-[11px] text-[#7c75a5] dark:text-[#9490b0]">
             MAT-2233 - 2 h ago
           </p>
         </div>

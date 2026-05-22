@@ -55,8 +55,8 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, ease: [0.25, 0.1, 0.25, 1] }}
               className={cn(
-                "max-w-[520px] text-heading-base dark:text-heading-base-dark",
-                "text-[2rem] sm:text-[2.5rem] md:text-[3rem] lg:text-[3.25rem] xl:text-[3.5rem]",
+                "max-w-[460px] text-heading-base dark:text-heading-base-dark",
+                "text-[1.75rem] sm:text-[2.125rem] md:text-[2.5rem] lg:text-[2.75rem] xl:text-[3rem]",
                 "leading-[0_95] tracking-[-0_05em]"
               )}
             >
@@ -74,7 +74,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.12, ease: "easeOut" }}
               className={cn(
-                "mt-8 max-w-[480px] text-base font-normal leading-[1_6] md:text-lg lg:mt-10",
+                "mt-6 max-w-[420px] text-sm font-normal leading-[1_6] md:text-base lg:mt-8",
                 "text-sub-blue dark:text-sub-blue-dark"
               )}
             >
@@ -97,22 +97,22 @@ export function Hero() {
               onMouseMove={onMouseMove}
               onMouseLeave={onMouseLeave}
               className={cn(
-                "relative mx-auto w-full max-w-[600px]",
-                "h-[520px] sm:h-[540px] md:h-[560px]",
-                "lg:mx-0 lg:ml-auto lg:max-w-[620px]"
+                "relative mx-auto w-full max-w-[500px]",
+                "h-[420px] sm:h-[440px] md:h-[460px]",
+                "lg:mx-0 lg:mr-auto lg:ml-0 lg:max-w-[520px]"
               )}
             >
               {/* Top row */}
               <FloatingCard
                 label="Billing"
-                icon={<Receipt size={26} strokeWidth={2} />}
+                icon={<Receipt size={22} strokeWidth={2} />}
                 bgColor="#2f43ff"
                 textColor="#ffffff"
                 rotation={6}
-                width={300}
-                height={80}
-                fontSize={30}
-                paddingLeft={32}
+                width={250}
+                height={64}
+                fontSize={24}
+                paddingLeft={28}
                 shadow="0 14px 36px rgba(47, 67, 255, 0.2)"
                 hoverShadow="0 22px 50px rgba(47, 67, 255, 0.45)"
                 zIndex={5}
@@ -121,19 +121,19 @@ export function Hero() {
                 entranceDelay={0.28}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="right-2 top-0"
+                className="left-[28%] top-8"
               />
 
               <FloatingCard
                 label="Matters"
-                icon={<MattersIcon size={26} />}
+                icon={<MattersIcon size={22} />}
                 bgColor="#ea7a22"
                 textColor="#ffffff"
                 rotation={-6}
-                width={280}
-                height={76}
-                fontSize={30}
-                paddingLeft={32}
+                width={230}
+                height={62}
+                fontSize={24}
+                paddingLeft={28}
                 shadow="0 14px 36px rgba(234, 122, 34, 0.22)"
                 hoverShadow="0 22px 48px rgba(234, 122, 34, 0.45)"
                 zIndex={3}
@@ -149,8 +149,8 @@ export function Hero() {
               <PortalCard
                 rotation={2}
                 zIndex={4}
-                width={320}
-                height={92}
+                width={270}
+                height={78}
                 entranceDelay={0.36}
                 floatDuration={6.5}
                 parallaxX={smoothX}
@@ -161,14 +161,14 @@ export function Hero() {
               {/* Bottom row — staggered so Tasks & Documents don't touch */}
               <FloatingCard
                 label="Tasks"
-                icon={<ListChecks size={24} strokeWidth={2} />}
+                icon={<ListChecks size={20} strokeWidth={2} />}
                 bgColor="#2c1f4d"
                 textColor="#ff8c20"
                 rotation={-4}
-                width={280}
-                height={76}
-                fontSize={28}
-                paddingLeft={28}
+                width={230}
+                height={62}
+                fontSize={22}
+                paddingLeft={24}
                 shadow="0 14px 32px rgba(44, 31, 77, 0.25)"
                 hoverShadow="0 20px 44px rgba(255, 140, 32, 0.25)"
                 zIndex={2}
@@ -177,19 +177,19 @@ export function Hero() {
                 entranceDelay={0.44}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="bottom-[108px] left-4"
+                className="bottom-[88px] left-4"
               />
 
               <FloatingCard
                 label="Documents"
-                icon={<FileText size={26} strokeWidth={2} />}
+                icon={<FileText size={22} strokeWidth={2} />}
                 bgColor="#2c1f4d"
                 textColor="#ff8c20"
                 rotation={6}
-                width={300}
-                height={80}
-                fontSize={30}
-                paddingLeft={30}
+                width={250}
+                height={64}
+                fontSize={24}
+                paddingLeft={26}
                 shadow="0 14px 32px rgba(44, 31, 77, 0.25)"
                 hoverShadow="0 20px 44px rgba(255, 140, 32, 0.25)"
                 zIndex={1}
@@ -198,7 +198,7 @@ export function Hero() {
                 entranceDelay={0.5}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="bottom-4 right-2"
+                className="bottom-0 right-8"
               />
             </div>
           </motion.div>
