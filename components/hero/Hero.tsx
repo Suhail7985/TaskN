@@ -103,8 +103,8 @@ export function Hero() {
               onMouseMove={onMouseMove}
               onMouseLeave={onMouseLeave}
               className={cn(
-                "relative mx-auto w-full max-w-[500px]",
-                "h-[520px] sm:h-[540px] md:h-[560px]",
+                "relative mx-auto w-full max-w-[520px]",
+                "h-[480px] sm:h-[500px] md:h-[520px]",
                 "-translate-x-10 translate-y-8 sm:-translate-x-12 sm:translate-y-10",
                 "lg:mx-0 lg:mr-auto lg:ml-0"
               )}
@@ -128,7 +128,7 @@ export function Hero() {
                 entranceDelay={0.28}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-0 top-2"
+                className="left-[180px] top-[72px] sm:left-[235px] md:left-[248px]"
               />
 
               <FloatingCard
@@ -149,12 +149,12 @@ export function Hero() {
                 entranceDelay={0.32}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-0 top-[96px]"
+                className="left-0 top-[98px]"
               />
 
               {/* Middle — portal centered */}
               <PortalCard
-                rotation={2}
+                rotation={0}
                 zIndex={4}
                 width={270}
                 height={78}
@@ -162,7 +162,7 @@ export function Hero() {
                 floatDuration={6.5}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-0 top-[188px] md:left-[252px] md:top-[178px]"
+                className="left-[98px] top-[168px] sm:left-[180px] md:left-[232px]"
               />
 
               {/* Bottom row — staggered so Tasks & Documents don't touch */}
@@ -184,7 +184,7 @@ export function Hero() {
                 entranceDelay={0.44}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-0 top-[306px]"
+                className="left-0 top-[278px]"
               />
 
               <FloatingCard
@@ -205,7 +205,7 @@ export function Hero() {
                 entranceDelay={0.5}
                 parallaxX={smoothX}
                 parallaxY={smoothY}
-                className="left-0 top-[404px] md:left-[252px] md:top-[394px]"
+                className="left-[180px] top-[340px] sm:left-[228px] md:left-[230px]"
               />
             </div>
           </motion.div>
